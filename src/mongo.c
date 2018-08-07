@@ -15,11 +15,11 @@
  *    limitations under the License.
  */
 
-#if _MSC_VER && ! _CRT_SECURE_NO_WARNINGS
+#if defined( _MSC_VER ) && !defined( _CRT_SECURE_NO_WARNINGS )
   #define _CRT_SECURE_NO_WARNINGS
 #endif
 
-#if _MSC_VER < 1900
+#if defined( _MSC_VER ) && _MSC_VER < 1900
   #define snprintf _snprintf
 #endif
 
